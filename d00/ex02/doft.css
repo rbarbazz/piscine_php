@@ -1,0 +1,208 @@
+body {
+	background-color: #3c3c3c
+}
+
+#topwrap {
+	width: 1420px;
+	margin: 0 auto 0 auto;
+}
+
+#leftwrap {
+	height: 445px;
+	width: 140px;
+	margin-top: 25px;
+	margin-left: 595px;
+}
+
+#botwrap {
+	width: 1020px;
+	height: 580px;
+	margin: -445px auto auto 760px;
+}
+
+#rightwrap {
+	height: 445px;
+	width: 140px;
+	left: 1815px;
+	top: 165px;
+	position: absolute;
+}
+
+#greenwrap {
+	background-color: #88FE89;
+	width: 535px;
+	height: 170px;
+	position: absolute;
+	left: 500px;
+	top: 670px;
+	font-family: sans-serif;
+	font-size: 20px;
+}
+
+#day_of_the_42 {
+	margin: 10px 0 0 10px;
+	width: 450px;
+}
+
+#loupe {
+	margin-left: 690px;
+	width: 230px;
+	margin-top: 20px;
+	position: absolute;
+}
+
+#oeil {
+	padding: 2px;
+	border: solid red 5px;
+	border-radius: 5px;
+	margin-left: 28px;
+}
+
+#chair {
+	width: 130px;
+	height: 130px;
+	position: absolute;
+	left: 1120px;
+	top: 500px;
+}
+
+#screen {
+	width: 190px;
+	height: 145px;
+	position: absolute;
+	left: 1580px;
+	top: 487px;
+}
+
+#reload {
+	width: 20px;
+	position: absolute;
+	margin: 6px 10px 100px 930px;
+}
+
+#close {
+	width: 20px;
+	position: absolute;
+	margin: 100px 10px 6px 930px;
+}
+
+#cluster {
+	widht: 1000px;
+	height: 560px;
+	margin: 10px 10px 10px 11px;
+}
+
+#book {
+	width: 60px;
+	height: 90px;
+}
+
+#towel {
+	width: 70px;
+	height: 55px;
+	margin-left: 35px;
+}
+
+#brick {
+	width: 120px;
+	height: 70px;
+	margin-left: 10px;
+	background-image: url("resources/brick.jpg");
+}
+
+#text {
+	width: initial;
+	height: initial;
+	top: 30px;
+	left: 12px;
+	position: absolute;
+}
+
+#text2 {
+	width: initial;
+	height: initial;
+	top: 30px;
+	left: 155px;
+	position: absolute;
+}
+
+#text3 {
+	width: initial;
+	height: initial;
+	top: 55px;
+	left: 12px;
+	position: absolute;
+}
+
+#text4 {
+	width: initial;
+	height: initial;
+	top: 55px;
+	left: 28px;
+	text-shadow: 5px 5px 6px #FF0000;
+	position: absolute;
+}
+
+#text5 {
+	width: initial;
+	height: initial;
+	top: 55px;
+	left: 134px;
+	position: absolute;
+}
+
+#text6 {
+	width: initial;
+	height: initial;
+	top: 75px;
+	left: 12px;
+	position: absolute;
+}
+
+#text7 {
+	width: initial;
+	height: initial;
+	top: 75px;
+	left: 20px;
+	font-style: italic;
+	position: absolute;
+}
+
+#entrez {
+	width: initial;
+	height: initial;
+	top: 15px;
+	left: 62px;
+	position: relative;
+	font-size: 36px;
+	font-family: serif;
+}
+
+#input {
+	width: 380px;
+	top: 100px;
+	left: 12px;
+	position: absolute;
+}
+
+#rep {
+	position: absolute;
+	top: 99px;
+	left: 410px;
+	height: 25px;
+}
+
+.wrapper {
+	background-color: #909090;
+	box-shadow: 10px 10px 10px;
+	border-radius: 15px;
+}
+
+.actions {
+	width: 70px;
+	margin: 5px 0 2px 35px;
+}
+
+.object {
+	margin: 15px auto 0 40px;
+}

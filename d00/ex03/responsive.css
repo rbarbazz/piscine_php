@@ -1,0 +1,33 @@
+#cell {
+	width: calc(97vmin / 18);
+}
+
+#table {
+	width: 97vmin;
+	margin: auto;
+}
+
+.elem
+{
+	border: 0.01vmin solid white;
+}
+
+.symbol
+{
+	text-align: center;
+	font-size: 2.5vmin;
+	color: green;
+}
+.weight
+{
+	text-align: right;
+	font-size: 0.8vmin;
+	position: static;
+	color: red;
+}
+.number
+{
+	text-align: left;
+	font-size: 0.8vmin;
+	color: yellow;
+}
