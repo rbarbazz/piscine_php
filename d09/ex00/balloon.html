@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<HTML>
+	<head>
+		<style>
+		#myid {
+		background-color: red;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		}
+		</style>
+		<title>Javascript</title>
+	</head>
+	<body>
+		<div id="myid" style="background-color: red; width: 200px; height: 200px; border-radius: 50%;"onclick="blowBalloon()">
+		</div>
+		<script>
+			var balloon = document.getElementById("myid");
+			function blowBalloon() {
+				if (balloon.style.backgroundColor == 'red') {
+				balloon.style.backgroundColor='green';
+				}
+				else if (balloon.style.backgroundColor == 'green') {
+					balloon.style.backgroundColor == 'blue'
+				}
+				else if (balloon.style.backgroundColor == 'blue') {
+					balloon.style.backgroundColor == 'red'
+				}
+				console.log(balloon.style.backgroundColor);
+			}
+		</script>
+	</body>
+</HTML>
