@@ -1,33 +1,57 @@
 <!DOCTYPE HTML>
-<HTML>
+<html>
 	<head>
-		<style>
-		#myid {
-		background-color: red;
-		width: 200px;
-		height: 200px;
-		border-radius: 50%;
-		}
-		</style>
 		<title>Javascript</title>
 	</head>
 	<body>
-		<div id="myid" style="background-color: red; width: 200px; height: 200px; border-radius: 50%;"onclick="blowBalloon()">
+		<div style="background-color: red; width: 200px; height: 200px; border-radius: 50%;" onclick="blowBalloon(this)" onmouseout="unblowBalloon(this)">
 		</div>
 		<script>
-			var balloon = document.getElementById("myid");
-			function blowBalloon() {
+			function unblowBalloon(balloon) {
+				var width = parseFloat(balloon.style.width);
+				if (width > 200) {
+					balloon.style.width = (width - 5) + 'px';
+					var height = parseFloat(balloon.style.height);
+					balloon.style.height = (height - 5) + 'px';
+				}
+				if (balloon.style.backgroundColor == 'blue') {
+					balloon.style.backgroundColor = 'green';
+					return ;
+				}
+				if (balloon.style.backgroundColor == 'green') {
+					balloon.style.backgroundColor = 'red';
+					return ;
+				}
 				if (balloon.style.backgroundColor == 'red') {
-				balloon.style.backgroundColor='green';
+					balloon.style.backgroundColor = 'blue';
+					return ;
 				}
-				else if (balloon.style.backgroundColor == 'green') {
-					balloon.style.backgroundColor == 'blue'
+			}
+			function blowBalloon(balloon) {
+				var width = parseFloat(balloon.style.width);
+				if (width < 420) {
+					balloon.style.width = (width + 10) + 'px';
+					var height = parseFloat(balloon.style.height);
+					balloon.style.height = (height + 10) + 'px';
 				}
-				else if (balloon.style.backgroundColor == 'blue') {
-					balloon.style.backgroundColor == 'red'
+				var width = parseFloat(balloon.style.width);
+				if (width > 420) {
+					balloon.style.width = '200px';
+					balloon.style.height = '200px';
 				}
-				console.log(balloon.style.backgroundColor);
+				if (balloon.style.backgroundColor == 'red') {
+					balloon.style.backgroundColor = 'green';
+					return ;
+				}
+				if (balloon.style.backgroundColor == 'green') {
+					balloon.style.backgroundColor = 'blue';
+					return ;
+				}
+				if (balloon.style.backgroundColor == 'blue') {
+					balloon.style.backgroundColor = 'red';
+					return ;
+				}
 			}
 		</script>
 	</body>
-</HTML>
+</html>
