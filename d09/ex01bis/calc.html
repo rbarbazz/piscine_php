@@ -1,9 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 	<body>
-		<input type="text" name="left"></input>
+		<input type="text" id="left"></input>
 		<select id="operator">
   			<option value="add" selected>+</option>
   			<option value="sub">-</option>
@@ -11,24 +12,25 @@
 			<option value="div">/</option>
 			<option value="mod">%</option>
 		</select>
-		<input type="text" name="right"></input>
-		<input type="submit" onclick="calculator()" value="Try Me!"></input>
+		<input type="text" id="right"></input>
+		<input type="submit" id="tryme" value="Try Me!"></input>
 		<script>
 		setInterval(function() { alert("Please, use me..."); }, 30000);
 		function isANumber(str)
 		{
   			return !/\D/.test(str);
 		}
-		function calculator()
-		{
-			var left = document.getElementsByName('left')[0].value;
-			var right = document.getElementsByName('right')[0].value;
+		$("#tryme").click(function() {
+			var left = $("#left").val();
+			var right = $("#right").val();
+			console.log(left);
 			if (!(isANumber(left))|| !(isANumber(right)))
 			{
 				alert("Error :(");
 				return ;
 			}
-			var operator = document.getElementById('operator').value;
+			var operator = $("#operator").val();
+			console.log(operator);
 			if (right == "0" && (operator == "div" || operator == "mod"))
 			{
 				alert("It’s over 9000!");
@@ -48,7 +50,7 @@
 				result = parseInt(left) % parseInt(right);
 			alert(result);
 			console.log(result);
-		}
+		});
 		</script>
 	</body>
 </html>
