@@ -29,7 +29,7 @@
 			}
 			function blowBalloon(balloon) {
 				var width = parseFloat(balloon.style.width);
-				if (width < 420) {
+				if (width <= 420) {
 					balloon.style.width = (width + 10) + 'px';
 					var height = parseFloat(balloon.style.height);
 					balloon.style.height = (height + 10) + 'px';

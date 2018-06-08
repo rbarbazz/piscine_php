@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Javascript</title>
+	</head>
+	<body>
+		<input type="text" name="left"></input>
+		<select id="operator">
+  			<option value="add" selected>+</option>
+  			<option value="sub">-</option>
+			<option value="mult">*</option>
+			<option value="div">/</option>
+			<option value="mod">%</option>
+		</select>
+		<input type="text" name="right"></input>
+		<input type="submit" onclick="calculator()" value="Try Me!"></input>
+		<script>
+		setInterval(function() { alert("Please, use me..."); }, 30000);
+		function isANumber(str)
+		{
+  			return !/\D/.test(str);
+		}
+		function calculator()
+		{
+			var left = document.getElementsByName('left')[0].value;
+			var right = document.getElementsByName('right')[0].value;
+			if (!(isANumber(left))|| !(isANumber(right)))
+			{
+				alert("Error :(");
+				return ;
+			}
+			var operator = document.getElementById('operator').value;
+			if (right == "0" && (operator == "div" || operator == "mod"))
+			{
+				alert("It’s over 9000!");
+				console.log("It’s over 9000!");
+				return ;
+			}
+			var result;
+			if (operator == "add")
+				result = parseInt(left) + parseInt(right);
+			if (operator == "sub")
+				result = parseInt(left) - parseInt(right);
+			if (operator == "mult")
+				result = parseInt(left) * parseInt(right);
+			if (operator == "div")
+				result = parseInt(left) / parseInt(right);
+			if (operator == "mod")
+				result = parseInt(left) % parseInt(right);
+			alert(result);
+			console.log(result);
+		}
+		</script>
+	</body>
+</html>
