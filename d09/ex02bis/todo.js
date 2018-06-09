@@ -32,7 +32,8 @@ function saveADeliciousCake(ft_list)
 	setCookie("cake", str, 30);
 }
 
-function newTodo() {
+$(document).ready(function() {
+	$("#butt").click(function() {
 	var task = prompt();
 	if (task != null) {
 		var div = document.createElement('div');
@@ -41,7 +42,8 @@ function newTodo() {
 		div.setAttribute("onclick", "todoDel(this)");
 		saveADeliciousCake(ft_list);
     }
-}
+})});
+
 function todoDel(todo) {
 	if (confirm("Êtes-vous sûr de vouloir supprimer ce todo ?")) {
 		ft_list.removeChild(todo);
